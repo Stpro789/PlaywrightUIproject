@@ -1,7 +1,6 @@
 const {test}= require('@playwright/test');
 test('check the visibility of the elements',async({page})=>{
-    const context = await browser.newContext();
-    const page = await context.newPage();
+
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
     await page.waitForTimeout(2000);
 
@@ -22,7 +21,7 @@ test('check the visibility of the elements',async({page})=>{
     }
 
     const isvisible2 = await page.isVisible('a[href="https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPimModule"]')&&isvisible('PIM')
-    if (isvisible1) {
+    if (isvisible2) {
         console.log('PIM link is visible on dashboard page');
     } else {
         console.log('PIM link is not visible on dashboard page');
