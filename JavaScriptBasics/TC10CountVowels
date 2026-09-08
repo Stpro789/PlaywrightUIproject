@@ -1,0 +1,35 @@
+//Count Vowels Write a program to count the number of vowels (a, e, i, o, u) in a string.
+// program to count the number of vowels in a string
+
+// defining vowels
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const vowels = ["a", "e", "i", "o", "u"]
+
+function countVowel(result) {
+    // initialize count
+    let count = 0;
+
+    // loop through string to test if each character is a vowel
+    for (let letter of result.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }
+
+    // return number of vowels
+    return count
+}
+
+// take input
+rl.question('Enter a string: ', (input) => {
+    const result = countVowel(input);
+    console.log(result);
+    rl.close();
+});
