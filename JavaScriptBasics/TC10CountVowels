@@ -3,15 +3,14 @@
 
 // defining vowels
 
-const readline = require('readline');
+/*const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-const vowels = ["a", "e", "i", "o", "u"]
-
+*/
+const vowels = ["a", "e", "i", "o", "u"];
 function countVowel(result) {
     // initialize count
     let count = 0;
@@ -26,10 +25,15 @@ function countVowel(result) {
     // return number of vowels
     return count
 }
+console.log(countVowel("Hello World")); 
+//
+//countVowel("Hello World");
 
-// take input
+// take input/*
+/*
 rl.question('Enter a string: ', (input) => {
     const result = countVowel(input);
     console.log(result);
     rl.close();
 });
+*/
